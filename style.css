@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-cyan: hsl(158, 36%, 37%);
+  --clr-dark-cyan: hsl(158, 36%, 20%);
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Fraunces', serif;
+}
+
+p {
+  line-height: 1.75rem;
+  color: grey;
+}
+
+.container {
+  display: flex;
+  padding: 2em 1em;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--clr-cream);
+}
+
+.card {
+  display: flex;
+  border-radius: 0.5em;
+  background-color: white;
+  margin: auto;
+  max-width: 46em;
+}
+
+.card > * {
+  width: 50%;
+}
+
+.product-img {
+  object-fit: cover;
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.card-info {
+  margin: auto 0;
+  padding: 2em;
+}
+
+.category {
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  color: grey;
+  margin-top: 0;
+}
+
+.description {
+  font-size: 1.125em;
+}
+
+.prices {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.prices p {
+  margin: 0;
+}
+
+.final-price {
+  font-family: 'Fraunces', serif;
+  color: var(--clr-cyan);
+  font-size: 2.5rem;
+}
+
+.full-price {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.btn-add-cart {
+  width: 100%;
+  height: fit-content;
+  color: white;
+  background-color: var(--clr-cyan);
+  border-radius: 0.5em;
+  border: none;
+  position: relative;
+}
+
+.btn-add-cart > * {
+  display: inline-block;
+  margin-inline: 0.25em;
+}
+
+.btn-add-cart:hover {
+  background-color: var(--clr-dark-cyan);
+  cursor: pointer;
+}
+
+.btn-add-cart:active {
+  outline: 1px solid var(--clr-dark-cyan);
+}
+
+@media (max-width: 660px) {
+  .container {
+    height: fit-content;
+  }
+
+  .card {
+    display: block;
+  }
+
+  .card > * {
+    width: 100%;
+  }
+
+  .card-info {
+    padding: 1em 2em 3em;
+  }
+
+  .product-img {
+    max-height: 20em;
+    border-radius: 0.5em 0.5em 0 0;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+footer {
+  font-size: 0.75rem;
+  width: 100%;
+  margin-block: 1.5em;
+}
+
+footer a {
+  color: var(--clr-cyan);
+}
